@@ -10,8 +10,6 @@
 
 // Dichiariamo chi ha vinto.
 
-// alert("Devi scegliere o pari o dispari!");
-
 do {
     var sceltaUtente = prompt("Scegli pari o dispari");
 
@@ -21,7 +19,7 @@ console.log(sceltaUtente);
 do {
     var numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
 
-} while (numeroUtente <= 0 || numeroUtente > 5); 
+} while (isNaN(numeroUtente) || numeroUtente <= 0 || numeroUtente > 5); 
 console.log(numeroUtente);
 
 var numeroComputer = getRandomNumber(1, 5);
@@ -29,7 +27,6 @@ console.log(numeroComputer);
 
 var somma = numeroUtente + numeroComputer;
 console.log("La somma dei numeri è: ", somma);
-
 
 if (isEven(somma) == sceltaUtente) {
     console.log("Hai vinto!");
