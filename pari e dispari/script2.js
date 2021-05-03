@@ -24,7 +24,7 @@ do {
 } while (numeroUtente <= 0 || numeroUtente > 5); 
 console.log(numeroUtente);
 
-var numeroComputer = getRandomNumber ();
+var numeroComputer = getRandomNumber(1, 5);
 console.log(numeroComputer);
 
 var somma = numeroUtente + numeroComputer;
@@ -49,8 +49,8 @@ function isEven (num) {
     }
 }
 
-function getRandomNumber () {
-    var numeroComputer = Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
+function getRandomNumber (min, max) {
+    var numeroComputer = Math.floor(Math.random() * (max - min + 1) ) + min;
     return numeroComputer;
 }
 
